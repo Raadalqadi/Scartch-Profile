@@ -1,0 +1,88 @@
+.home {
+    width: 100%;
+    margin: 30px 0;
+    padding: 10px;
+    animation: show 1s ease;
+}
+
+.home_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.home_content .first_section {
+    padding: 40px 20px;
+}
+
+.home_content .first_section .title {
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 40px);
+    text-transform: capitalize;
+}
+
+.home_content .first_section .description {
+    margin: 15px 0;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.home_content .first_section button {
+    padding: 10px 15px;
+    border: none;
+    font-size: clamp(15px, 2vw, 16px);
+    color: var(--white-color);
+    border-radius: 5px;
+    background-color: var(--purple-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.home_content .first_section button:hover{
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.home_content .second_section {
+    margin: auto;
+    max-width: 400px;
+    min-width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.home_content .second_section img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.home_content .second_section .card {
+    max-width: 100%;
+    padding: 20px;
+    background-color: var(--blue-color);
+    border-radius: 10px;
+    color: var(--white-color);
+    font-size: clamp(12px, 2vw, 15px);
+}
+
+.prands_content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    background: var(--gray-color);
+    padding: 30px;
+}
+.prands .prands_content img{
+    width: 100%;
+}
+.prands .prands_content .prand{
+    padding: 20px 0;
+}
+@media screen and (max-width:900px) {
+    .prands_content{
+        grid-template-columns: repeat(2,1fr)
+    }
+    .home_content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .home_content .first_section .title{
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,70 @@
+.pricing {
+  margin-top: 90px;
+  padding: 10px;
+}
+.pricing >  .title {
+  max-width: 90%;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  border-bottom: 2px dotted var(--gray3nd-color);
+}
+ .pricing >  .title h2 {
+  font-weight: 700;
+  font-size: clamp(20px, 3vw, 40px);
+  text-transform: capitalize;
+}
+.pricing > .title  p {
+  margin: 15px 0;
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 900px;
+}
+.pricing_content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100%;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pricing_content .card_pricing {
+  width: 100%;
+  max-width: 300px;
+  min-height: 420px;
+  padding: 0 20px;
+  margin: 20px auto;
+  background: var(--white-color);
+  border-radius: 10px;
+  border: 2px solid var(--gray3nd-color);
+  box-shadow: 2px 2px 5px 0px var(--gray2nd-color);
+}
+
+.pricing_content .card_pricing .header {
+  display: flex;
+  align-items: center;
+}
+
+.pricing_content .card_pricing .header h3 {
+  font-size: clamp(15px, 2vw, 16px);
+}
+
+.pricing_content .card_pricing .title {
+  font-size: clamp(15px, 2vw, 16px);
+}
+
+.pricing_content .card_pricing .header img {
+  margin: 15px 10px;
+  width: 48px;
+  height: 48px;
+}
+
+.pricing_content .card_pricing li {
+  font-size: clamp(15px, 1vw, 16px);
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 801px) {
+  .pricing_content {
+    display: block;
+  }
+}

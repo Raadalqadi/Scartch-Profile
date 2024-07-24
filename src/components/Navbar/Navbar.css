@@ -1,0 +1,121 @@
+header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 30px;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  background: var(--white-color);
+  border-bottom: 1px solid var(--gray2nd-color);
+}
+
+header .logo {
+  padding: 10px 0;
+  font-size: clamp(16px, 5vw, 40px);
+  font-weight: 600;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 10px;
+}
+
+.navbar ul li a {
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: clamp(5px, 5vw, 20px);
+  color: var(--black-color);
+  transition: border-bottom 0.4s;
+  /* Added transition property */
+}
+
+.navbar ul li .active {
+  border-bottom: 2px solid var(--black-color);
+}
+
+.navbar ul li a:hover {
+  border-bottom: 1px solid var(--black-color);
+}
+
+header .login {
+  display: flex;
+  align-items: center;
+  padding-inline: 20px;
+  text-align: end;
+}
+
+header .login button {
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--black-color);
+  color: var(--white-color);
+  font-size: clamp(8px, 3vw, 10px);
+  cursor: pointer;
+}
+header .login .lets_start {
+  margin: 7px;
+  padding: 10px 15px;
+  border: 1px solid var(--gray2nd-color);
+  background: var(--white-color);
+  color: var(--black-color);
+  text-decoration: none;
+  font-size: clamp(8px, 3vw, 15px);
+  transition: 0.5s;
+}
+header .login .lets_start:hover {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+@media screen and (max-width: 900px) {
+  header {
+    padding-inline: 20px;
+  }
+
+  .navbar ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    position: fixed;
+    background: var(--white-color);
+    border: 1px solid var(--gray2nd-color);
+    left: 0;
+    bottom: 0;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    margin: 0;
+  }
+
+  .navbar ul li a {
+    display: inline-block;
+    padding: 10px 0;
+  }
+
+  header .login {
+    padding-inline: 0;
+  }
+
+  header .login a {
+    color: var(--black-color);
+    /* Corrected variable name */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
